@@ -306,6 +306,7 @@ describe('controller', function () {
 
 			/* Expect the model to call the remove method with the to do id of 42 and a callback function */
 			expect(model.remove).toHaveBeenCalledWith(42, jasmine.any(Function));
+
 		});
 
 		it('should remove an entry from the view', function () {

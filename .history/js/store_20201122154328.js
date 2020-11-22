@@ -81,14 +81,14 @@
 
 		for (var i = 0; i < 6; i++) {
 			newId += charset.charAt(Math.floor(Math.random() * charset.length));
-		}
 
-		if(this.isExistent(todos, newId)) {
-			// We need to re-invoke the same functiion!
-			this.generateId();
-		}
+			if(this.isExistent(todos, newId)) {
+				// We need to re-invoke the same functiion!
+				this.generateId();
+			}
 
-		return newId;
+			return newId;
+		}
 	}
 
 	Store.prototype.isExistent = function (todos, newId) {
@@ -134,7 +134,7 @@
 		} else {
 
 			// Assign an ID
-			var newId = this.generateId(todos);
+			// var newId = this.generateId(todos);
 			updateData.id = parseInt(newId);
 
 

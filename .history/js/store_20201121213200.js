@@ -81,19 +81,19 @@
 
 		for (var i = 0; i < 6; i++) {
 			newId += charset.charAt(Math.floor(Math.random() * charset.length));
-		}
 
-		if(this.isExistent(todos, newId)) {
-			// We need to re-invoke the same functiion!
-			this.generateId();
-		}
+			if(this.isExistent(todos, newId)) {
+				// We need to re-invoke the same functiion!
+				this.generateId();
+			}
 
-		return newId;
+			return newId;
+		}
 	}
 
-	Store.prototype.isExistent = function (todos, newId) {
+	Store.prototype.isExistent = function (todos, id) {
 		todos.find(function (todo) {
-			if (todo.id == newId) {
+			if (todo.id == id) {
 				return true;
 			}
 		})
